@@ -5,20 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const text = document.getElementById('textbox');
   const reset = document.getElementById('reset');
 
+  const diffcolor = document.getElementById('textbox');
+  const appearresult = document.getElementById('textbox');
+
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {
     if (text.value > 0) {
       text.value--;
     }
+    // 色違い確率ボタンが押されたら結果を代入する
+   appearresult.value = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 
   // ボタンが押されたらカウント増
   upbutton.addEventListener('click', () => {
     text.value++;
+    // 色違い確率ボタンが押されたら結果を代入する
+   appearresult.value = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 
   // リセットボタンが押されたら0に戻る
   reset.addEventListener('click', () => {
     text.value = 0;
+    // 色違い確率ボタンが押されたら結果を代入する
+   appearresult.value = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 });
