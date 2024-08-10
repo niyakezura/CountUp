@@ -38,3 +38,8 @@ body {
 .resetbtn {
     margin: 20px 0 0 65px;
 }
+
+.Shiny_Probability {
+    margin: 0 auto;
+    border-radius: 0;
+}

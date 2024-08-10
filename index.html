@@ -18,12 +18,17 @@
     </div>
 
     <div class="Shiny_Probability">
-        <select name="prob-list">
+        <select name="prob-list" id="prob-select">
             <option value="512">1/512</option>
             <option value="1024">1/1024</option>
             <option value="4096">1/4096</option>
             <option value="8192">1/8192</option>
         </select>
+        
+        <div class="prob-display">
+            <p><span type="text" class="count-display" id="textbox">0</span>回までに色違いが出る確率</p>
+            <output name="result" for="textbox" id="prob-textbox">0.000%</output>
+        </div>
     </div>
     
 </body>
