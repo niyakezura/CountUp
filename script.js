@@ -1,4 +1,4 @@
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
    //HTMLのid値を使って以下のDOM要素を取得
 const downbutton = document.getElementById('down');
 const upbutton = document.getElementById('up');
