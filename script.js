@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const apearnumber = document.getElementById('n-textbox');
   const appearresult = document.getElementById('prob-textbox');
 
+  //色違い確率をプルダウンで選択するたびに値に代入する
+  diffcolor.addEventListener('change', () => {
+    updateProbability();
+  });
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {
     if (text.value > 0) {
