@@ -9,12 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const apearnumber = document.getElementById('n-textbox');
   const appearresult = document.getElementById('prob-textbox');
 
-   // プルダウン選択が変更されたときに 色違い確率を更新する
-   diffcolor.addEventListener('change', () => {
-    updateProbability();
-    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
-    appearresult.textContent = (probability *100).toFixed(5);
-  });
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {
     if (text.value > 0) {
@@ -22,8 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
-    appearresult.textContent = (probability *100).toFixed(5);
+   appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 
   // ボタンが押されたらカウント増
