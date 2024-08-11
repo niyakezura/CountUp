@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
    // プルダウン選択が変更されたときに 色違い確率を更新する
    diffcolor.addEventListener('change', () => {
     updateProbability();
+    appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+  });
   });
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {
