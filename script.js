@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const text = document.getElementById('textbox');
   const reset = document.getElementById('reset');
 
-  const diffcolor = document.getElementById('textbox');
-  const appearresult = document.getElementById('textbox');
+  const diffcolor = document.getElementById('n-textbox');
+  const appearresult = document.getElementById('prob-textbox');
 
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {

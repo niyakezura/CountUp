@@ -1,11 +1,11 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
 }
   
 .container {
     width: 300px;
-    margin: 200px auto 0;
+    margin: 200px auto;
 }
   
 .field {
@@ -40,6 +40,13 @@ body {
 }
 
 .Shiny_Probability {
+    padding: 10px;
     margin: 0 auto;
-    border-radius: 0;
+    width: 220px;
+    border: 1px solid #858585;
+    border-radius: 10px;
+}
+
+#prob-list {
+    margin: 0 auto;
 }
