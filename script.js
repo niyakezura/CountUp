@@ -37,4 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
     appearresult.textContent = (probability *100).toFixed(5);
   });
+
+  // リストの選択が変更されたら確率も変わる
+  diffcolor.addEventListener('change', () => {
+    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    appearresult.textContent = (probability *100).toFixed(5);
+  });
 });
