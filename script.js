@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   downbutton.addEventListener('click', () => {
     if (text.value > 0) {
       text.value--;
+      apearnumber.value=1;
     }
     apearnumber.value=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ボタンが押されたらカウント増
   upbutton.addEventListener('click', () => {
     text.value++;
+    apearnumber.value=1;
     apearnumber.value=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
    appearresult.valuet= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
