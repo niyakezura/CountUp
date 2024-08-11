@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProbability();
     appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)*100;
   });
-  });
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {
     if (text.value > 0) {
@@ -30,14 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
     text.value++;
     apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
+<<<<<<< HEAD
    appearresult.textContent= 1-(((diffcolor.value -1)/diffcolor.value)**text.value)*100;
+=======
+    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    appearresult.textContent = (probability *100).toFixed(5);
+>>>>>>> 47c89ed117f5c13a5317006b3037e72d50d49abb
   });
 
-  // リセッsトボタンが押されたら0に戻る
+  // リセットボタンが押されたら0に戻る
   reset.addEventListener('click', () => {
     text.value = 0;
     apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
+<<<<<<< HEAD
    appearresult.textContent = (1-(((diffcolor.value -1)/diffcolor.value)**text.value))*100;
+=======
+    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    appearresult.textContent = (probability *100).toFixed(5);
+>>>>>>> 47c89ed117f5c13a5317006b3037e72d50d49abb
   });
 });
