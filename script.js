@@ -14,24 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (text.value > 0) {
       text.value--;
     }
-    apearnumber.innerText=text.value;
+    apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.innerText = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 
   // ボタンが押されたらカウント増
   upbutton.addEventListener('click', () => {
     text.value++;
-    apearnumber.innerText=text.value;
+    apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.innerText= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.textContent= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 
   // リセットボタンが押されたら0に戻る
   reset.addEventListener('click', () => {
     text.value = 0;
-    apearnumber.innerText=text.value;
+    apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.innerText = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 });
