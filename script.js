@@ -41,10 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
     probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
     appearresult.textContent = (probability *100).toFixed(5);
   });
-
-  // 数値を直接変更したら確率も変わる
-  text.addEventListener('change', () => {
-    probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
-    appearresult.textContent = (probability *100).toFixed(5);
-  });
 });
