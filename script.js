@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const diffcolor = document.getElementById('prob-select');
   const apearnumber = document.getElementById('n-textbox');
   const appearresult = document.getElementById('prob-textbox');
+  const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
 
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {
@@ -15,17 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
       text.value--;
     }
     apearnumber.textContent=text.value;
-     // 色違い確率ボタンが押されたら結果を代入する
-     const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
-     appearresult.textContent = (probability *100).toFixed(5);
+    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    appearresult.textContent = (probability *100).toFixed(5);
   });
 
   // ボタンが押されたらカウント増
   upbutton.addEventListener('click', () => {
     text.value++;
     apearnumber.textContent=text.value;
-    // 色違い確率ボタンが押されたら結果を代入する
-    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
     appearresult.textContent = (probability *100).toFixed(5);
   });
 
@@ -33,14 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
   reset.addEventListener('click', () => {
     text.value = 0;
     apearnumber.textContent=text.value;
-    // 色違い確率ボタンが押されたら結果を代入する
-    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
     appearresult.textContent = (probability *100).toFixed(5);
   });
 
   // リストの選択が変更されたら確率も変わる
   diffcolor.addEventListener('change', () => {
-    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    appearresult.textContent = (probability *100).toFixed(5);
+  });
+
+  // 数値を直接変更したら確率も変わる
+  text.addEventListener('change', () => {
+    probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
     appearresult.textContent = (probability *100).toFixed(5);
   });
 });
