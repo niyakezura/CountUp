@@ -22,16 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // ボタンが押されたらカウント増
   upbutton.addEventListener('click', () => {
     text.value++;
-    apearnumber.textContent=text.value;
+    apearnumber.value=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.textContent= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.value= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 
-  // リセットボタンが押されたら0に戻る
+  // リセッsトボタンが押されたら0に戻る
   reset.addEventListener('click', () => {
     text.value = 0;
-    apearnumber.textContent=text.value;
+    apearnumber.value=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.value = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 });
