@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const apearnumber = document.getElementById('n-textbox');
   const appearresult = document.getElementById('prob-textbox');
 
- 
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {
     if (text.value > 0) {
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     text.value++;
     apearnumber.value=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.valuet= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.value= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 
   // リセットボタンが押されたら0に戻る
