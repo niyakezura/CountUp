@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     text.value++;
     apearnumber.value=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.innerText= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.valuet= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
   });
 
   // リセットボタンが押されたら0に戻る
