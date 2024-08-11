@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
    // プルダウン選択が変更されたときに 色違い確率を更新する
    diffcolor.addEventListener('change', () => {
     updateProbability();
-    appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+    appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)*100;
   });
   });
   // ボタンが押されたらカウント減
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)*100;
   });
 
   // ボタンが押されたらカウント増
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     text.value++;
     apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.textContent= 1-(((diffcolor.value -1)/diffcolor.value)**text.value);
+   appearresult.textContent= 1-(((diffcolor.value -1)/diffcolor.value)**text.value)*100;
   });
 
   // リセッsトボタンが押されたら0に戻る
