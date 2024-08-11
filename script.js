@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
    // プルダウン選択が変更されたときに 色違い確率を更新する
    diffcolor.addEventListener('change', () => {
     updateProbability();
-    appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)*100;
+    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    appearresult.textContent = (probability *100).toFixed(5);
   });
   // ボタンが押されたらカウント減
   downbutton.addEventListener('click', () => {
@@ -21,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-   appearresult.textContent = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)*100;
+    const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
+    appearresult.textContent = (probability *100).toFixed(5);
   });
 
   // ボタンが押されたらカウント増
@@ -29,12 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     text.value++;
     apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-<<<<<<< HEAD
-   appearresult.textContent= 1-(((diffcolor.value -1)/diffcolor.value)**text.value)*100;
-=======
     const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
     appearresult.textContent = (probability *100).toFixed(5);
->>>>>>> 47c89ed117f5c13a5317006b3037e72d50d49abb
   });
 
   // リセットボタンが押されたら0に戻る
@@ -42,11 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     text.value = 0;
     apearnumber.textContent=text.value;
     // 色違い確率ボタンが押されたら結果を代入する
-<<<<<<< HEAD
-   appearresult.textContent = (1-(((diffcolor.value -1)/diffcolor.value)**text.value))*100;
-=======
     const probability = 1-(((diffcolor.value -1)/diffcolor.value)**text.value)
     appearresult.textContent = (probability *100).toFixed(5);
->>>>>>> 47c89ed117f5c13a5317006b3037e72d50d49abb
   });
 });
